@@ -4,42 +4,29 @@
 #
 Name     : osc-lib
 Version  : 1.2.0
-Release  : 5
+Release  : 6
 URL      : http://pypi.debian.net/osc-lib/osc-lib-1.2.0.tar.gz
 Source0  : http://pypi.debian.net/osc-lib/osc-lib-1.2.0.tar.gz
 Summary  : OpenStackClient Library
 Group    : Development/Tools
 License  : Apache-2.0
 Requires: osc-lib-python
-BuildRequires : bandit-python
-BuildRequires : cliff-python
-BuildRequires : cmd2-python
-BuildRequires : extras
-BuildRequires : extras-python
-BuildRequires : os-client-config-python
-BuildRequires : oslo.utils-python
-BuildRequires : oslosphinx-python
-BuildRequires : osprofiler-python
+Requires: Babel
+Requires: cliff
+Requires: keystoneauth1
+Requires: os-client-config
+Requires: oslo.i18n
+Requires: oslo.utils
+Requires: pbr
+Requires: simplejson
+Requires: six
+Requires: stevedore
+BuildRequires : configparser-python
 BuildRequires : pbr
 BuildRequires : pip
-BuildRequires : pluggy
-BuildRequires : positional-python
-BuildRequires : prettytable
-BuildRequires : py-python
-BuildRequires : pyparsing-python
-BuildRequires : pytest
 BuildRequires : python-dev
 BuildRequires : python3-dev
-BuildRequires : reno-python
 BuildRequires : setuptools
-BuildRequires : simplejson
-BuildRequires : stevedore
-BuildRequires : testrepository-python
-BuildRequires : testtools
-BuildRequires : testtools-python
-BuildRequires : tox
-BuildRequires : unicodecsv-python
-BuildRequires : virtualenv
 
 %description
 =======
@@ -52,11 +39,6 @@ osc-lib
 %package python
 Summary: python components for the osc-lib package.
 Group: Default
-Requires: cliff-python
-Requires: os-client-config-python
-Requires: oslo.utils-python
-Requires: simplejson
-Requires: stevedore
 
 %description python
 python components for the osc-lib package.
@@ -67,17 +49,12 @@ python components for the osc-lib package.
 
 %build
 export LANG=C
-export SOURCE_DATE_EPOCH=1484556167
+export SOURCE_DATE_EPOCH=1489335904
 python2 setup.py build -b py2
 python3 setup.py build -b py3
 
-%check
-export http_proxy=http://127.0.0.1:9/
-export https_proxy=http://127.0.0.1:9/
-export no_proxy=localhost,127.0.0.1,0.0.0.0
-PYTHONPATH=%{buildroot}/usr/lib/python2.7/site-packages python2 setup.py test || :
 %install
-export SOURCE_DATE_EPOCH=1484556167
+export SOURCE_DATE_EPOCH=1489335904
 rm -rf %{buildroot}
 python2 -tt setup.py build -b py2 install --root=%{buildroot} --force
 python3 -tt setup.py build -b py3 install --root=%{buildroot} --force

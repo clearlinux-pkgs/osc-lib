@@ -1,21 +1,2 @@
 # This file contains additional build requirements that did not get
 # picked up automatically. One name per line, no whitespace.
-stevedore
-simplejson
-oslo.utils-python
-os-client-config-python
-cliff-python
-pyparsing-python
-positional-python
-unicodecsv-python
-prettytable
-cmd2-python
-reno-python
-oslosphinx-python
-bandit-python
-osprofiler-python
-testtools-python
-testtools
-testrepository-python
-extras
-extras-python
