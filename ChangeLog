@@ -1,6 +1,30 @@
 CHANGES
 =======
 
+1.3.0
+-----
+
+* To display image size in human friendly format
+* Don't call formatters on None value
+* Include OSC additions 2
+* Include OSC additions
+* Add deprecated_option_warning() method to Command
+* Calls to federated service providers using Keystone-to-Keystone
+* Add Constraints support
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+* Don't include openstack/common in flake8 exclude list
+* Fix version import in releasenotes
+* Remove os-client-config hacks for 1.19.x and 1.20.x
+* Updated from global requirements
+* Updated from global requirements
+* Allow passing app_name and app_version for useragent
+* Avoid string actions on non-string objects
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+
 1.2.0
 -----
 
