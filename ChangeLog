@@ -1,6 +1,30 @@
 CHANGES
 =======
 
+1.4.0
+-----
+
+* Add MultiKeyValueCommaAction to osc-lib
+* Add more API support
+* Add formattable column base classes
+* Updated from global requirements
+* Updated from global requirements
+* Avoid to authenticate twice
+* Change noauth strategy for plugin loading
+* Nit: Reorder some util methods in alphabetic order
+* Using assertIsNone() instead of assertEqual(None)
+* Fix find_resource exception handling on numeric names with kwargs
+* Util methods for column name backward compatibility
+* The python 3.5 is added
+* Updated from global requirements
+* Updated from global requirements
+* Pass ssl values through to OCC
+* Avoid 'NoneType' error when format conversion
+* Updated from global requirements
+* Update reno for stable/ocata
+* Updated from global requirements
+* Updated from global requirements
+
 1.3.0
 -----
 
