@@ -1,6 +1,12 @@
 CHANGES
 =======
 
+1.5.0
+-----
+
+* Add token auth test
+* Revert "Avoid to authenticate twice"
+
 1.4.0
 -----
 
