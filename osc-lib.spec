@@ -4,7 +4,7 @@
 #
 Name     : osc-lib
 Version  : 1.5.1
-Release  : 10
+Release  : 11
 URL      : https://pypi.debian.net/osc-lib/osc-lib-1.5.1.tar.gz
 Source0  : https://pypi.debian.net/osc-lib/osc-lib-1.5.1.tar.gz
 Summary  : OpenStackClient Library
