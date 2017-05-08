@@ -1,6 +1,14 @@
 CHANGES
 =======
 
+1.6.0
+-----
+
+* Fix shell saving OpenStackConfig object
+* Follow-up to headers handler to fix find\_bulk()
+* Updated from global requirements
+* Updated from global requirements
+
 1.5.1
 -----
 
