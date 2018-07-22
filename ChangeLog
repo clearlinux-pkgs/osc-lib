@@ -1,6 +1,94 @@
 CHANGES
 =======
 
+1.11.0
+------
+
+* Fixes a bug with issubclass() being called on an instance
+* Stop processing requests verify args
+* Replace autodoc with sphinxcontrib-apidoc
+* Run OSC unit test tips jobs
+* Pass prompt\_for\_password to OSC\_Config constructor
+* Fix exception in log warning when no cloud config exists
+* Use openstack.config for config and Session objects
+* Update sphinx lower-constraint to match test-requirements
+* Adding api\_version to FakeAPP
+* Add release note link in README
+* Add cloud to warning about domain related config
+* Delete the output in "find\_bulk" api
+* fix tox python3 overrides
+* Add OpenTracing based driver id
+* Trivial: Update pypi url to new url
+* Rename python-openstacksdk to openstacksdk
+* add lower-constraints job
+
+1.10.0
+------
+
+* Allow to use the none auth plugin
+* Set defaults in ClientManager tests
+* Updated from global requirements
+* Zuul: Remove project name
+* Zuul: Remove project name
+* Update reno for stable/queens
+* Updated from global requirements
+* Updated from global requirements
+* Suppress subTest() expected errors
+
+1.9.0
+-----
+
+* Fix find() interface when attr is not specified
+* Relocate utils tests to match the main code
+* Add project lookup utils
+* Updated from global requirements
+* Fix sorting in Python 3
+
+1.8.0
+-----
+
+* Add utils for better column handling
+* Updated from global requirements
+* Use converged SDK insead of os-client-config
+* Remove -U from pip install
+* Avoid tox\_install.sh for constraints support
+* Util to calculate header and attr names based on parsed\_args.columns
+* Make -tips job non-voting
+* Remove setting of version/release from releasenotes
+* Updated from global requirements
+* Updated from global requirements
+* Consume the devstack functional jobs from OSC
+* Migrade legacy jobs into the repo
+* Add CLI/ENV options and documentation for keystone-to-keystone
+* Updated from global requirements
+* --os-profile option suddenly causes trouble in unit tests
+* Updates for stestr
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+* Update reno for stable/pike
+* Updated from global requirements
+* Update the documentation link for doc migration
+* Updated from global requirements
+* Updated from global requirements
+* Emit warnings to encourage cliff FormattableColumn
+
+1.7.0
+-----
+
+* Add test methods to compare formattable column values
+* Updated from global requirements
+* use openstackdocstheme html context
+* update links to docs in readme
+* switch from oslosphinx to openstackdocstheme
+* turn on warning-is-error for sphinx
+* rearrange existing documentation to fit the new standard layout
+* Optimize find\_resource: do not run the same query twice
+* Make --os-profile load from environment variables
+* Deprecate --profile and remove after Apr 2017
+* Updated from global requirements
+
 1.6.0
 -----
 
@@ -13,6 +101,7 @@ CHANGES
 -----
 
 * Tell ClientManager when auth is required
+* Add endpoint hook to BaseAPI
 
 1.5.0
 -----
@@ -32,6 +121,7 @@ CHANGES
 * Change noauth strategy for plugin loading
 * Nit: Reorder some util methods in alphabetic order
 * Using assertIsNone() instead of assertEqual(None)
+* Remove log translations
 * Fix find\_resource exception handling on numeric names with kwargs
 * Util methods for column name backward compatibility
 * The python 3.5 is added
