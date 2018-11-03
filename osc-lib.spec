@@ -4,15 +4,15 @@
 #
 Name     : osc-lib
 Version  : 1.11.1
-Release  : 15
+Release  : 16
 URL      : https://files.pythonhosted.org/packages/8d/a8/b63a53baed828a3e46ff2d1ee5cb63f794e9e071f05e99229642edfc46a5/osc-lib-1.11.1.tar.gz
 Source0  : https://files.pythonhosted.org/packages/8d/a8/b63a53baed828a3e46ff2d1ee5cb63f794e9e071f05e99229642edfc46a5/osc-lib-1.11.1.tar.gz
 Summary  : OpenStackClient Library
 Group    : Development/Tools
 License  : Apache-2.0
-Requires: osc-lib-python3
-Requires: osc-lib-license
-Requires: osc-lib-python
+Requires: osc-lib-license = %{version}-%{release}
+Requires: osc-lib-python = %{version}-%{release}
+Requires: osc-lib-python3 = %{version}-%{release}
 Requires: Babel
 Requires: Sphinx
 Requires: cliff
@@ -25,6 +25,7 @@ Requires: pbr
 Requires: reno
 Requires: simplejson
 Requires: six
+Requires: sphinxcontrib-apidoc
 Requires: stevedore
 BuildRequires : buildreq-distutils3
 BuildRequires : pbr
@@ -44,7 +45,7 @@ license components for the osc-lib package.
 %package python
 Summary: python components for the osc-lib package.
 Group: Default
-Requires: osc-lib-python3
+Requires: osc-lib-python3 = %{version}-%{release}
 
 %description python
 python components for the osc-lib package.
@@ -67,14 +68,14 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1534341131
-python3 setup.py build -b py3
+export SOURCE_DATE_EPOCH=1541270062
+python3 setup.py build
 
 %install
 rm -rf %{buildroot}
-mkdir -p %{buildroot}/usr/share/doc/osc-lib
-cp LICENSE %{buildroot}/usr/share/doc/osc-lib/LICENSE
-python3 -tt setup.py build -b py3 install --root=%{buildroot}
+mkdir -p %{buildroot}/usr/share/package-licenses/osc-lib
+cp LICENSE %{buildroot}/usr/share/package-licenses/osc-lib/LICENSE
+python3 -tt setup.py build  install --root=%{buildroot}
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
 echo ----[ mark ]----
@@ -83,8 +84,8 @@ echo ----[ mark ]----
 %defattr(-,root,root,-)
 
 %files license
-%defattr(-,root,root,-)
-/usr/share/doc/osc-lib/LICENSE
+%defattr(0644,root,root,0755)
+/usr/share/package-licenses/osc-lib/LICENSE
 
 %files python
 %defattr(-,root,root,-)
