@@ -1,11 +1,22 @@
 CHANGES
 =======
 
-1.11.1
+1.12.0
 ------
 
+* Use template for lower-constraints
+* Default to using public interface for all clients
+* Fix formatter handling for python 3.7
+* Remove pypy job
+* Mask password when specified as an argument with a space
+* add lib-forward-testing-python3 test job
+* switch documentation job to new PTI
+* add python 3.6 unit test job
+* import zuul job settings from project-config
 * Revert "Fixes a bug with issubclass() being called on an instance"
-* Update .gitreview for stable/rocky
+* Remove PyPI downloads
+* Replaced a few references to LP bugs with storyboard
+* Update reno for stable/rocky
 
 1.11.0
 ------
