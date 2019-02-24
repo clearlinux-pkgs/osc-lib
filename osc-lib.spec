@@ -4,7 +4,7 @@
 #
 Name     : osc-lib
 Version  : 1.12.0
-Release  : 18
+Release  : 19
 URL      : https://files.pythonhosted.org/packages/1a/11/e4212e904a439678a1e4cf4952891c2c030e08fe732a77301ba3a181bbe3/osc-lib-1.12.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/1a/11/e4212e904a439678a1e4cf4952891c2c030e08fe732a77301ba3a181bbe3/osc-lib-1.12.0.tar.gz
 Summary  : OpenStackClient Library
@@ -14,18 +14,14 @@ Requires: osc-lib-license = %{version}-%{release}
 Requires: osc-lib-python = %{version}-%{release}
 Requires: osc-lib-python3 = %{version}-%{release}
 Requires: Babel
-Requires: Sphinx
 Requires: cliff
 Requires: keystoneauth1
-Requires: openstackdocstheme
 Requires: openstacksdk
 Requires: oslo.i18n
 Requires: oslo.utils
 Requires: pbr
-Requires: reno
 Requires: simplejson
 Requires: six
-Requires: sphinxcontrib-apidoc
 Requires: stevedore
 BuildRequires : buildreq-distutils3
 BuildRequires : pbr
@@ -72,7 +68,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1546990070
+export SOURCE_DATE_EPOCH=1551029908
 export MAKEFLAGS=%{?_smp_mflags}
 python3 setup.py build
 
