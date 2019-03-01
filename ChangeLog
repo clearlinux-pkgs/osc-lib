@@ -1,10 +1,18 @@
 CHANGES
 =======
 
+1.12.1
+------
+
+* Add release note for --os-user-id fix
+* add python 3.7 unit test job
+* Allow use of user-id as well as username for authentication
+
 1.12.0
 ------
 
 * Use template for lower-constraints
+* Change openstack-dev to openstack-discuss
 * Default to using public interface for all clients
 * Fix formatter handling for python 3.7
 * Remove pypy job
