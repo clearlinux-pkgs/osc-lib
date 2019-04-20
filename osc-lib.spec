@@ -4,7 +4,7 @@
 #
 Name     : osc-lib
 Version  : 1.12.1
-Release  : 20
+Release  : 21
 URL      : https://files.pythonhosted.org/packages/0d/22/798d1fc700d54f36c4b43243845172354efbaf02a7bf1b87e3f200cc3877/osc-lib-1.12.1.tar.gz
 Source0  : https://files.pythonhosted.org/packages/0d/22/798d1fc700d54f36c4b43243845172354efbaf02a7bf1b87e3f200cc3877/osc-lib-1.12.1.tar.gz
 Summary  : OpenStackClient Library
