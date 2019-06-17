@@ -1,6 +1,18 @@
 CHANGES
 =======
 
+1.13.0
+------
+
+* Corrent using auth\_type=none in clouds.yaml
+* Add FakeModule from OSC
+* Move the \_tag module from OSC to osc-lib
+* Final switch to stestr
+* Dropping the py35 testing
+* Updates for OpenDev transition
+* OpenDev Migration Patch
+* Update master for stable/stein
+
 1.12.1
 ------
 
