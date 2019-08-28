@@ -1,6 +1,14 @@
 CHANGES
 =======
 
+1.14.0
+------
+
+* Cleanups to prepare for OSC 4 release
+* Fix usage of NotFound exception
+* Add error message when occurrence Forbidden error
+* Add Python 3 Train unit tests
+
 1.13.0
 ------
 
