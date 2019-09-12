@@ -7,3 +7,4 @@ python-openstackclient
 python-saharaclient
 python-senlinclient
 python-troveclient
+python-zaqarclient

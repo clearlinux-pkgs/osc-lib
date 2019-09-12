@@ -1,6 +1,12 @@
 CHANGES
 =======
 
+1.14.1
+------
+
+* format\_dict() returns no value for None
+* Handle nested dicts in format\_dict()
+
 1.14.0
 ------
 
