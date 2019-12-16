@@ -1,5 +1,5 @@
 PKG_NAME := osc-lib
-URL = https://files.pythonhosted.org/packages/ab/ab/2d534f2d4821a012e9f09d8d2790bb3551a78e0868a37a2be17fea7702c1/osc-lib-1.14.1.tar.gz
+URL = https://files.pythonhosted.org/packages/45/38/5a3ef567494ea5bb52f21df50cf2cf80e94b06c6c39818e8baac2b5ea6e1/osc-lib-1.15.0.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common
