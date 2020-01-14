@@ -1,6 +1,15 @@
 CHANGES
 =======
 
+2.0.0
+-----
+
+* Add a release note for dropping py2
+* Drop python 2.7 support and testing
+* Add enhance\_help kwarg to tags option generators
+* Switch to Ussuri jobs
+* Add KeyValueAppendAction to osc-lib
+
 1.15.0
 ------
 
