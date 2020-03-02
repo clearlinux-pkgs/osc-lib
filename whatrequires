@@ -1,6 +1,7 @@
 # This file contains recursive sources that require this package
 python-designateclient
 python-magnumclient
+python-manilaclient
 python-mistralclient
 python-neutronclient
 python-openstackclient

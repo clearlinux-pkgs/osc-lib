@@ -4,7 +4,7 @@
 #
 Name     : osc-lib
 Version  : 2.0.0
-Release  : 30
+Release  : 31
 URL      : https://files.pythonhosted.org/packages/a7/d3/00d5b716ca5e5de8ef43a9eb78e8a9793e8497545e6ab9788e5817dfb8a7/osc-lib-2.0.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/a7/d3/00d5b716ca5e5de8ef43a9eb78e8a9793e8497545e6ab9788e5817dfb8a7/osc-lib-2.0.0.tar.gz
 Summary  : OpenStackClient Library
@@ -39,9 +39,66 @@ BuildRequires : stevedore
 =======
 osc-lib
 =======
+
 .. image:: https://img.shields.io/pypi/v/osc-lib.svg
-:target: https://pypi.org/project/osc-lib/
-:alt: Latest Version
+    :target: https://pypi.org/project/osc-lib/
+    :alt: Latest Version
+
+OpenStackClient (aka OSC) is a command-line client for OpenStack. osc-lib
+is a package of common support modules for writing OSC plugins.
+
+* `PyPi`_ - package installation
+* `Online Documentation`_
+* `Launchpad project`_ - part of OpenStackClient
+* `Bugs`_ - issue tracking
+* `Source`_
+* `Developer` - getting started as a developer
+* `Contributing` - contributing code
+* `Testing` - testing code
+* IRC: #openstack-sdks on Freenode (irc.freenode.net)
+* License: Apache 2.0
+
+.. _PyPi: https://pypi.org/project/osc-lib
+.. _Online Documentation: http://docs.openstack.org/osc-lib/latest/
+.. _Launchpad project: https://launchpad.net/python-openstackclient
+.. _Bugs: https://storyboard.openstack.org/#!/project_group/80
+.. _Source: https://opendev.org/openstack/osc-lib
+.. _Developer: http://docs.openstack.org/project-team-guide/project-setup/python.html
+.. _Contributing: http://docs.openstack.org/infra/manual/developers.html
+.. _Testing: http://docs.openstack.org/osc-lib/latest/contributor/#testing
+.. _Release Notes: https://docs.openstack.org/releasenotes/osc-lib
+
+Getting Started
+===============
+
+osc-lib can be installed from PyPI using pip::
+
+    pip install osc-lib
+
+Transition From OpenStackclient
+===============================
+
+This library was extracted from the main OSC repo after the OSC 2.4.0 release.
+The following are the changes to imports that will cover the majority of
+transition to using osc-lib:
+
+* openstackclient.api.api -> osc_lib.api.api
+* openstackclient.api.auth -> osc_lib.api.auth
+* openstackclient.api.utils -> osc_lib.api.utils
+* openstackclient.common.command -> osc_lib.command.command
+* openstackclient.common.commandmanager -> osc_lib.command.commandmanager
+* openstackclient.common.exceptions -> osc_lib.exceptions
+* openstackclient.common.logs -> osc_lib.logs
+* openstackclient.common.parseractions -> osc_lib.cli.parseractions
+* openstackclient.common.session -> osc_lib.session
+* openstackclient.common.utils -> osc_lib.utils
+* openstackclient.i18n -> osc_lib.i18n
+* openstackclient.shell -> osc_lib.shell
+
+Also, some of the test fixtures and modules may be used:
+
+* openstackclient.tests.fakes -> osc_lib.tests.fakes
+* openstackclient.tests.utils -> osc_lib.tests.utils
 
 %package license
 Summary: license components for the osc-lib package.
@@ -64,6 +121,7 @@ python components for the osc-lib package.
 Summary: python3 components for the osc-lib package.
 Group: Default
 Requires: python3-core
+Provides: pypi(osc-lib)
 
 %description python3
 python3 components for the osc-lib package.
@@ -78,7 +136,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1579031125
+export SOURCE_DATE_EPOCH=1583193425
 # -Werror is for werrorists
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
