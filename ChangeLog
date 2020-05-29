@@ -1,6 +1,25 @@
 CHANGES
 =======
 
+2.1.0
+-----
+
+* Add a couple of release notes
+* Remove .testr.conf
+* Remove six library from dependencies
+* Save the results from the early authentication
+* Add pep8 import order check
+* Use mock from unittest
+* Remove Babel from requirements
+* Add Python3 victoria unit tests
+* Update master for stable/ussuri
+* Cleanup py27 support
+* Fix the requirement of keystoneauth1
+* Update to hacking 3.0
+* Update hacking for Python3
+* Replace assertItemsEqual with assertCountEqual
+* Stop using lib-forward-testing
+
 2.0.0
 -----
 
