@@ -1,6 +1,14 @@
 CHANGES
 =======
 
+2.2.0
+-----
+
+* Remove commandmanager subclass
+* Stop configuring install\_command in tox and stop use pip
+* Add get\_osc\_show\_columns\_for\_sdk\_resource function
+* Switch to newer openstackdocstheme and reno versions
+
 2.1.0
 -----
 
@@ -17,6 +25,7 @@ CHANGES
 * Fix the requirement of keystoneauth1
 * Update to hacking 3.0
 * Update hacking for Python3
+* Revert "Add error message when occurrence Forbidden error"
 * Replace assertItemsEqual with assertCountEqual
 * Stop using lib-forward-testing
 
