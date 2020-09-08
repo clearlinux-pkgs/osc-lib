@@ -1,9 +1,14 @@
 CHANGES
 =======
 
+2.2.1
+-----
+
+
 2.2.0
 -----
 
+* Fix the misspelling of "argument"
 * Remove commandmanager subclass
 * Stop configuring install\_command in tox and stop use pip
 * Add get\_osc\_show\_columns\_for\_sdk\_resource function
